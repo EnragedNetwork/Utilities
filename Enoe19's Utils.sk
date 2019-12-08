@@ -1,0 +1,123 @@
+# Enoe19's Utility
+# Made by Enoe19
+# Command prefix is /.<command>
+
+
+command /.about:
+	description: General info about the plugin
+	usage: /.about
+	permission: op
+	permission message: You don't have the permission to use this command!
+	executable by: players and console
+	trigger:
+		message "&lEnoe19's Utility is a plugin that has some cool and useful commands (contains useless commands too)"
+
+command /.sudo <player> <text>:
+	description: Forces players to say something
+	usage: /.sudo [player] [text]
+	permission: op
+	permission message: You don't have the permission to use this command!
+	executable by: players and console
+	trigger:
+		force 1st arg to send the message the 2nd arg
+		send action bar "Forced %1st arg% to say %2nd arg%" to player
+
+command /.console <text>:
+	description: Makes the console execute commands
+	usage: /.console [text]
+	permission: op
+	permission message: You don't have the permission to use this command!
+	executable by: players and console
+	trigger:
+		execute console command "arg-1"
+
+command /.underblock:
+	description: Places a block under you
+	usage: /.ublock
+	permission: op
+	permission message: You don't have the permission to use this command!
+	executable by: players and console
+	trigger:
+		set block under player to stone
+
+command /.broadcast <text>:
+	description: Broadcasts a message
+	usage: /.broadcast [text]
+	permission: op
+	permission message: You don't have the permission to use this command!
+	executable by: players and console
+	trigger:
+		broadcast arg-1
+
+command /.heal [<player=%player%>]:
+	description: Heals the player
+	usage: /.heal [player (Leave blank if you want to heal yourself)]
+	permission: op
+	permission message: You don't have the permission to use this command!
+	executable by: players and console
+	trigger:
+		heal arg-1
+
+command /.damage [<player=%player%>] <number>:
+	description: Damages the player
+	usage: /.damage [player (Leave blank if you want to damage yourself)] [number of hearts]
+	permission: op
+	permission message: You don't have the permission to use this command!
+	executable by: players and console
+	trigger:
+		damage arg-1 by arg-2
+
+command /.repair [<player=%player%>]:
+	description: Repair the player's held item
+	usage: /.repair [player (Leave blank if you want to repair your own item)]
+	permission: op
+	permission message: You don't have the permission to use this command!
+	executable by: players and console
+	trigger:
+		repair tool of arg-1
+
+command /.explode [<player=%player%>] <number>:
+	description: Explodes the player
+	usage: /.explode [player (Leave blank if you want to explode yourself)] [explosion size]
+	permission: op
+	permission message: You don't have the permission to use this command!
+	executable by: players and console
+	trigger:
+		create an explosion of force arg-2 at arg-1
+
+command /.feed [<player=%player%>]:
+	description: Feeds the player
+	usage: /.feed [player (Leave blank if you want to feed yourself)]
+	permission: op
+	permission message: You don't have the permission to use this command!
+	executable by: players and console
+	trigger:
+		feed arg-1
+
+command /.superheal [<player=%player%>]:
+	description: Heals and feeds the player
+	usage: /.superheal [player (Leave blank if you want to heal yourself)]
+	permission: op
+	permission message: You don't have the permission to use this command!
+	executable by: players and console
+	trigger:
+		heal arg-1
+		feed arg-1
+
+command /.invsee <player>:
+	description: Allows you to see and edit another player's inventory
+	usage: /.invsee [player]
+	permission: op
+	permission message: You don't have the permission to use this command!
+	executable by: players and console
+	trigger:
+		open arg-1's inventory for player
+
+command /.fakeblock <player> <item>:
+	description: Places a block that only the chosen player can see and interact with
+	usage: /.fakeblock [player] [block]
+	permission: op
+	permission message: You don't have the permission to use this command!
+	executable by: players and console
+	trigger:
+		make arg-1 see block at player as arg-2
