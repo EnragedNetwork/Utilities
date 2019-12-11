@@ -33,7 +33,7 @@ command /.console <text>:
 
 command /.underblock:
 	description: Places a block under you
-	usage: /.ublock
+	usage: /.underblock
 	permission: op
 	permission message: You don't have the permission to use this command!
 	executable by: players and console
